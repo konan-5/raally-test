@@ -266,7 +266,7 @@ const es = {
         hints: {
           'projectId': 'El ID interno de la empresa del proyecto.',
           'name': 'El nombre del proyecto.',
-          'type': 'El tipo de poyecto.',
+          'type': 'El tipo de proyecto.',
         },
         new: {
           title: 'Nuevo Proyecto',

@@ -267,7 +267,7 @@ const en = {
         hints: {
           'projectId': 'The internal company-wide ID of the project.',
           'name': 'The name of the project.',
-          'type': 'The type of the poject.',
+          'type': 'The type of the project.',
         },
         new: {
           title: 'New Project',

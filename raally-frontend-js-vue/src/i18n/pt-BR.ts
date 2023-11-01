@@ -266,7 +266,7 @@ const ptBR = {
         hints: {
           'projectId': 'Id interno do projeto.',
           'name': 'O Nome do Projeto.',
-          'type': 'O Tipo do pojeto.',
+          'type': 'O Tipo do Projeto.',
         },
         new: {
           title: 'Novo Projeto',
