@@ -81,18 +81,18 @@
 
           <el-button
             :disabled="saveLoading"
-            @click="doCancel"
-            icon="el-icon-fa-close"
-          >
-            <app-i18n code="common.cancel"></app-i18n>
-          </el-button>
-
-          <el-button
-            :disabled="saveLoading"
             @click="doReset"
             icon="el-icon-fa-undo"
           >
             <app-i18n code="common.reset"></app-i18n>
+          </el-button>
+          
+          <el-button
+            :disabled="saveLoading"
+            @click="doCancel"
+            icon="el-icon-fa-close"
+          >
+            <app-i18n code="common.cancel"></app-i18n>
           </el-button>
           
         </div>
