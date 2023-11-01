@@ -92,7 +92,7 @@
               <app-i18n code="common.reset"></app-i18n>
             </el-button>
 
-            <router-link :to="{ path: '' }">
+            <router-link :to="{ path: '/' }">
               <el-button
                 :disabled="saveLoading"
                 icon="el-icon-fa-close"
