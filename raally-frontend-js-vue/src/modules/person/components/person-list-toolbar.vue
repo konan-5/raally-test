@@ -57,7 +57,7 @@
           @click="doExport()"
           icon="el-icon-fa-file-excel-o"
         >
-          Export
+          <app-i18n code="common.export"></app-i18n>
         </el-button>
       </span>
     </el-tooltip>
