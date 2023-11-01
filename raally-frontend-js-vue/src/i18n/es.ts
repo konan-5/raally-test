@@ -620,6 +620,7 @@ const es = {
     },
     fields: {
       theme: 'Tema',
+      backgroundImages:'Imagen de Fondo'
     },
     colors: {
       default: 'Defecto',

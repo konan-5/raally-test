@@ -603,6 +603,7 @@ const en = {
     },
     fields: {
       theme: 'Theme',
+      backgroundImages:'Background Image'
     },
     colors: {
       default: 'Default',

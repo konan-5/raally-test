@@ -598,6 +598,7 @@ const ptBR = {
     },
     fields: {
       theme: 'Tema',
+      backgroundImages:'Imagem de Fundo'
     },
     colors: {
       default: 'Padrão',
