@@ -223,7 +223,7 @@ class AuthService {
       if (!user) {
         throw new Error400(
           options.language,
-          'auth.userNotFound',
+          'auth.wrongPassword',
         );
       }
 
