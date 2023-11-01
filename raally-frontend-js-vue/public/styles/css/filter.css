@@ -1,0 +1,65 @@
+.filter {
+  margin-bottom: 24px;
+  border: 1px solid #ebeef5;
+  border-radius: 4px;
+}
+
+.filter .el-select {
+  width: 100%;
+}
+
+.filter .filter-buttons {
+  text-align: right;
+}
+
+.filter-preview {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.filter-preview-left {
+  display: flex;
+  align-items: center;
+}
+
+.filter-preview-right {
+  color: #606266;
+}
+
+.filter-preview .el-tag {
+  margin: 4px;
+}
+
+.filter-preview-values {
+  margin-left: 16px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.filter-preview-values {
+  margin-left: 8px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.filter form {
+  padding: 16px;
+}
+
+.filter .filter-buttons > * {
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.filter .el-date-editor--datetimerange.el-input__inner {
+  width: 100%;
+}
+
+.filter .el-date-editor--daterange.el-input__inner {
+  width: 100%;
+}
