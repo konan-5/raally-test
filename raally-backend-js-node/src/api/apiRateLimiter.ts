@@ -13,7 +13,7 @@ import GlobalSettingsService from '../services/globalSettingsService';
 export function createRateLimiter(max: number, window: number = 1) {
   return rateLimit({
     max,
-    windowMs: (window * 10000),
+    windowMs: (window * 1000),
     message: 'errors.429',
     skip: async function (req) {
 
