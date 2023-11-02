@@ -74,7 +74,7 @@ export default class SequelizeRepository {
     );
 
     const people = await options.database.sequelize.query(
-      "SELECT personId, title, MAX(effectiveDate) as date FROM jobTitles WHERE tenantId = '" + tenant.id + "' GROUP BY personId",
+      "SELECT personId, title, MAX(effectiveDate) as date FROM jobTitles WHERE tenantId = '" + tenant.id + "' AND deletedAt IS NULL GROUP BY personId",
       {
         raw: true,
         type: QueryTypes.SELECT
