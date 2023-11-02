@@ -2,8 +2,15 @@ import authAxios from '@/shared/axios/auth-axios';
 import AuthCurrentTenant from '@/modules/auth/auth-current-tenant';
 
 export class SettingsService {
-  static applyThemeFromTenant() {
-    this.applyTheme('default');
+  static async applyThemeFromTenant() {
+
+    const tenantId = AuthCurrentTenant.get();
+
+    const response = await authAxios.get(
+      `/tenant/${tenantId}/settings`,
+    );
+
+    this.applyTheme(response.data.theme);
   }
 
   static async find() {
