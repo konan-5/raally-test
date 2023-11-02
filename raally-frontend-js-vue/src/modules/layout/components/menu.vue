@@ -64,6 +64,7 @@
         :class="classFor('/audit-logs')"
         :route="{ path: '/audit-logs' }"
         index="/audit-logs"
+        v-if = "hasPermissionToAuditLog || auditLogLocked"
         :disabled="auditLogLocked"
       >
         <i class="el-icon-fa-history"></i>
