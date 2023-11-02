@@ -128,7 +128,7 @@ class Permissions {
       },
       compensationCreate: {
         id: 'compensationCreate',
-        allowedRoles: [],
+        allowedRoles: [roles.admin],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
