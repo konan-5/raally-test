@@ -506,7 +506,7 @@ const en = {
     },
     create: {
       button: 'Create Workspace',
-      success: 'Workspace successfully saved',
+      success: 'Workspace successfully created',
     },
     update: {
       success: 'Workspace successfully saved',

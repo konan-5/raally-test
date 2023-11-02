@@ -93,6 +93,7 @@ export default {
           root: true,
         });
         commit('CREATE_SUCCESS');
+        Message.success(i18n('tenant.create.success'));
       } catch (error) {
         Errors.handle(error);
         commit('CREATE_ERROR');
