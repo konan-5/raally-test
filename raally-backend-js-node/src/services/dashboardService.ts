@@ -10,56 +10,37 @@ export default class DashboardService {
     this.timeToGather = 0;
   }
 
-  async getUsageByHoursData() {
-    const totalElapsedTime = this.timeToGather;
+  async measureElapsedTime(operation: () => Promise<any>) {
     const startTime = process.hrtime();
-    
-    const responseData = await SequelizeRepository.getUsageByHoursData(this.options);
-    
+    const responseData = await operation();
     const stopTime = process.hrtime(startTime);
-    const elapsedTime = stopTime[0] * 1000 + stopTime[1] / 1000000;
-    this.timeToGather = totalElapsedTime + elapsedTime;
-    
+    const elapsedTime = (stopTime[0] * 1e9 + stopTime[1]) / 1e6; // Convert to milliseconds
+    this.timeToGather += elapsedTime;
     return responseData;
+  }
+
+  async getUsageByHoursData() {
+    return this.measureElapsedTime(() =>
+      SequelizeRepository.getUsageByHoursData(this.options)
+    );
   }
 
   async getNumberOfPeoplePerRole() {
-    const totalElapsedTime = this.timeToGather;
-    const startTime = process.hrtime();
-
-    const responseData = await SequelizeRepository.getNumberOfPeoplePerRole(this.options);
-    
-    const stopTime = process.hrtime(startTime);
-    const elapsedTime = stopTime[0] * 1000 + stopTime[1] / 1000000
-    this.timeToGather = totalElapsedTime + elapsedTime;
-    
-    return responseData;
+    return this.measureElapsedTime(() =>
+      SequelizeRepository.getNumberOfPeoplePerRole(this.options)
+    );
   }
 
   async getUsageByPeopleData() {
-    const totalElapsedTime = this.timeToGather;
-    const startTime = process.hrtime();
-
-    const responseData = await SequelizeRepository.getUsageByPeopleData(this.options);
-    
-    const stopTime = process.hrtime(startTime);
-    const elapsedTime = stopTime[0] * 1000 + stopTime[1] / 1000000
-    this.timeToGather = totalElapsedTime + elapsedTime;
-
-    return responseData;
+    return this.measureElapsedTime(() =>
+      SequelizeRepository.getUsageByPeopleData(this.options)
+    );
   }
 
   async getIdlenessPerRoleData() {
-    const totalElapsedTime = this.timeToGather;
-    const startTime = process.hrtime();
-
-    const responseData = await SequelizeRepository.getIdlenessPerRoleData(this.options);
-    
-    const stopTime = process.hrtime(startTime);
-    const elapsedTime = stopTime[0] * 1000 + stopTime[1] / 1000000
-    this.timeToGather = totalElapsedTime + elapsedTime;
-    
-    return responseData;
+    return this.measureElapsedTime(() =>
+      SequelizeRepository.getIdlenessPerRoleData(this.options)
+    );
   }
 
   getGatheringTime() {
